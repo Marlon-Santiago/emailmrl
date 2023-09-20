@@ -3,8 +3,9 @@ from PySimpleGUI import WIN_CLOSED
 from emailmrl.list_editor import view
 
 class List_Editor():
-    def __init__(self):
+    def __init__(self, email_sender):
         self.window = None
+        self.ems = email_sender
         
     def instantiate(self):
         if self.window == None:
@@ -18,6 +19,7 @@ class List_Editor():
         
             if event == WIN_CLOSED:
                 self.window.close()
+                self.ems.unhide_window()
                 break
         
             if event == '-Send-':
@@ -29,10 +31,11 @@ class List_Editor():
     def close_window(self):
         if self.window is not None:
             self.window.close()
+        self.window = None
             
     def hide_window(self):
         if self.window is not None:
-            self.window.close()
+            self.window.Hide()
             
     def unhide_window(self):
         if self.window is not None:
