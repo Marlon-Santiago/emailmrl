@@ -23,7 +23,7 @@ def get_layouts():
     frame_email = [
         inner_element_space(500),
         [
-            sg.Text('Insira o Titulo:', font = ('Helvetica 15')),
+            sg.Text('Insira o Titulo', font = ('Helvetica 15')),
         ],
         [
             sg.In(key = '-Title-', size = (62, 1)),
@@ -45,11 +45,11 @@ def get_layouts():
             sg.Frame('Configuração da campanha', frame_campaing, element_justification = 'c'),
         ],
         [
-            sg.Frame('Configuração de email', frame_email, element_justification = 'c'),
+            sg.Frame('Configuração de E-mail', frame_email, element_justification = 'c'),
         ],
         [
-            sg.Button('Enviar', key = '-Send-', size = (15, 1), pad = (10, (10, 0))),
-            sg.Button('Gerenciar listas', key = '-ListEditor-', size = (15, 1), pad = (10, (10,0))),
+            sg.Button('Enviar e-mail', key = '-Send-', size = (15, 1), pad = (10, (10, 0)), justification = 'c'),
+            sg.Button('Gerenciar listas', key = '-ListEditor-', size = (15, 1), pad = (10, (10, 0)),justification = 'c')
         ],
         inner_element_space(500),
         
