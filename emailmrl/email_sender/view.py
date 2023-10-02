@@ -48,8 +48,8 @@ def get_layouts():
             sg.Frame('Configuração de E-mail', frame_email, element_justification = 'c'),
         ],
         [
-            sg.Button('Enviar e-mail', key = '-Send-', size = (15, 1), pad = (10, (10, 0)), justification = 'c'),
-            sg.Button('Gerenciar listas', key = '-ListEditor-', size = (15, 1), pad = (10, (10, 0)),justification = 'c')
+            sg.Button('Enviar e-mail', key = '-Send-', size = (15, 1), pad = (10, (10, 0))),
+            sg.Button('Gerenciar listas', key = '-ListEditor-', size = (15, 1), pad = (10, (10, 0)))
         ],
         inner_element_space(500),
         
